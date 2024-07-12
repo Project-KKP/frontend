@@ -1,5 +1,5 @@
 import {OpenAI} from "langchain/llms/openai";
-import {pinecone} from "@/utils/pinecone-client";
+import {pinecone} from "@/utils/p";
 import {PineconeStore} from "langchain/vectorstores/pinecone";
 import {OpenAIEmbeddings} from "langchain/embeddings/openai";
 import {ConversationalRetrievalQAChain} from "langchain/chains";

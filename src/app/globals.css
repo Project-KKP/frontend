@@ -10,3 +10,18 @@ body {
   background-image: url('../../public/header.png');
   background-color: rgba(0, 0, 0, 0.418);
 }
+
+.chat-body::-webkit-scrollbar {
+  width: 0.2em;
+  border-radius: 100px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: #FBD46D;
+  outline: 1px solid #FBD46D;
+  border-radius: 100px;
+}

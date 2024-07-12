@@ -8,6 +8,9 @@ import Image from 'next/image';
 
 function Chat() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAnswer, setAnswer] = useState(['Hallo, apakah anda yang bisa dibantu?']);
+  const [isMsg, setMsg] = useState();
+
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
@@ -26,26 +29,7 @@ function Chat() {
 
             <div className="py-5 px-2">
               <div className="chat-body p-2 max-h-[17rem] overflow-y-auto flex flex-col justify-between">
-                <div className="flex gap-2 items-center">
-                  <FaUserCircle className="text-3xl mt-1" />
-                  <div className="message user-message ">
-                    <p className="text-xs">Diskominfotik</p>
-                    <p className="bg-gray-200 p-2 rounded-tl-none rounded-lg mb-2">Hallo, apakah anda yang bisa dibantu?</p>
-                  </div>
-                </div>
-                <div className="ms-8">
-                  <div className="message admin-message place-items-end bg-blue-200 p-2 rounded-tr-none rounded-lg mb-2">Saya mempunyai pertanyaan tentang PBSE</div>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <FaUserCircle className="text-3xl mt-1" />
-                  <div className="message user-message ">
-                    <p className="text-xs">Diskominfotik</p>
-                    <p className="bg-gray-200 p-2 rounded-tl-none rounded-lg mb-2">Hallo, apakah anda yang bisa dibantu?</p>
-                  </div>
-                </div>
-                <div className="ms-8">
-                  <div className="message admin-message place-items-end bg-blue-200 p-2 rounded-tr-none rounded-lg mb-2">Saya mempunyai pertanyaan tentang PBSE</div>
-                </div>
+            
                 <div className="flex gap-2 items-center">
                   <FaUserCircle className="text-3xl mt-1" />
                   <div className="message user-message ">
@@ -57,9 +41,10 @@ function Chat() {
                   <div className="message admin-message place-items-end bg-blue-200 p-2 rounded-tr-none rounded-lg mb-2">Saya mempunyai pertanyaan tentang PBSE</div>
                 </div>
               </div>
-              <div className="chat-footer p-2 flex gap-2">
-                <input type="text" className="w-full p-2 border rounded-lg" placeholder="Masukan pesan..." />
-                <div className='bg-[#FBD46D] rounded-full p-3'>
+              <div className="chat-footer p-2 flex gap-2 ">
+                <input type="text" className="w-full p-2 border rounded-lg focus:outline-none
+                " placeholder="Masukan pesan..." />
+                <div className='bg-[#FBD46D] rounded-full p-3 cursor-pointer hover:bg-[#f0d489]'>
                   <IoMdPaperPlane className='text-xl'/>
                 </div>
               </div>
